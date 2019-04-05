@@ -70,6 +70,7 @@ Run Command
 ```
 
 ### File Structure
+```
 ├── ckpt
 │ ├── pretrain
 │ │ ├──  mobilenet.caffemodel
@@ -90,5 +91,6 @@ Run Command
 ├── LICENCE
 ├── train.sh
 ├── infer.py
+```
 
 
