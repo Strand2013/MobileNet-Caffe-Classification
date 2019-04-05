@@ -10,29 +10,6 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
 - [v2] [Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation](https://arxiv.org/abs/1801.04381)
 ]
 
-### File Structure
-```
-+-- ckpt
-|   +-- pretrain
-|       |   +--  mobilenet.caffemodel
-|       |   +--  mobilenet_v2.caffemodel
-+-- data
-|   +-- get_train_data_list.sh  # util script for data
-|   +-- your_data_dir
-+-- prototxt
-|   +-- m1_solver.prototxt
-|   +-- m2_solver.prototxt
-|   +-- v1
-|       |   +-- mobilenet_deplpoy.prototxt
-|       |   +-- mobilenet_train.prototxt
-|   +-- v2     
-|       |   +-- mobilenet_v2_deplpoy.prototxt
-|       |   +-- mobilenet_v2_train.prototxt
-+-- README.md
-+-- LICENCE
-+-- train.sh
-+-- infer.py
-```
 ### Usage
 ##### 1. Prepare data for classification task
 
@@ -91,5 +68,27 @@ Run Command
 # Use the python that your caffe envrionment.
 /xxx/python infer.py
 ```
+
+### File Structure
+├── ckpt
+│ ├── pretrain
+│ │ ├──  mobilenet.caffemodel
+│ │ ├──  mobilenet_v2.caffemodel
+├── data
+│ ├── get_train_data_list.sh  # util script for data
+│ ├── your_data_dir
+├── prototxt
+│ ├── m1_solver.prototxt
+│ ├── m2_solver.prototxt
+│ ├── v1
+│ │ ├── mobilenet_deplpoy.prototxt
+│ │ ├── mobilenet_train.prototxt
+│ ├── v2
+│ │ ├── mobilenet_v2_deplpoy.prototxt
+│ │ ├── mobilenet_v2_train.prototxt
+├── README.md
+├── LICENCE
+├── train.sh
+├── infer.py
 
 
