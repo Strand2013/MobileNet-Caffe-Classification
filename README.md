@@ -43,6 +43,7 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
     - net: your_train_prototxt_path
 
 - train.prototxt
+    - * amend all use_global_stats:false when traning
     - source: your_data_trainval.txt_path
     - image shape
         - new_height: your_img_h
