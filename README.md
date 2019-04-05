@@ -60,22 +60,23 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
  ```
 
 ##### 2. Train model
-1. modify solver.prototxt & train.prototxt
+a. modify solver.prototxt & train.prototxt
 
-```
-# solver.prototxt
-net: your_train_prototxt_path
+- solver.prototxt
+    - net: your_train_prototxt_path
 
-# train.prototxt
-source: your_data_trainval.txt_path
-## first conv layer
-# name: "conv1" for 3 channel image
-# name: "conv1_gray" for 1 channel image
-## fc7 layer
-# num_output : your_dataset_class_num
-```
+- train.prototxt
+    - source: your_data_trainval.txt_path
+    - image shape
+        - new_height: your_img_h
+        - new_width: your_img_w
+    - first conv layer
+        - name: "conv1" for 3 channel image
+        - name: "conv1_gray" for 1 channel image
+    - fc7 layer
+        - num_output : your_dataset_class_num
 
-2. Run Command
+b. Run Command
 
 ```
 sh train.sh mobilenet
