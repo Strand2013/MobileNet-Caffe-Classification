@@ -60,7 +60,22 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
  ```
 
 ##### 2. Train model
-Run command
+1. modify solver.prototxt & train.prototxt
+
+```
+# solver.prototxt
+net: your_train_prototxt_path
+
+# train.prototxt
+source: your_data_trainval.txt_path
+## first conv layer
+# name: "conv1" for 3 channel image
+# name: "conv1_gray" for 1 channel image
+## fc7 layer
+# num_output : your_dataset_class_num
+```
+
+2. Run Command
 
 ```
 sh train.sh mobilenet
@@ -68,5 +83,12 @@ sh train.sh mobilenet
 sh train.sh mobilenet_v2
 ```
 
+##### 3. Inference
+Run Command
+
+```
+# Use the python that your caffe envrionment.
+/xxx/python infer.py
+```
 
 
