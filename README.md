@@ -13,7 +13,7 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
 ### Usage
 ##### 1. Prepare data for classification task
 
- Put all images into one dircectory (your_data_dir), use file name save your data's label
+ 1.1 Put all images into one dircectory (your_data_dir), use file name save your data's label
  
  ```
  #before the separator "_" is your class index.
@@ -22,12 +22,12 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
  /data/2_xxx.png
  ...
  ```
- Run this command then you will get a file named trainval.txt
+ 1.2 Run this command then you will get a file named trainval.txt
  
  ```
  sh get_train_data_list.sh your_data_dir
  ```
- Data format for training
+ 1.3 Data format for training
  
  ```
  /imagepath class_index
@@ -37,7 +37,7 @@ Model prototxt files copy from https://github.com/shicai/MobileNet-Caffe and add
  ```
 
 ##### 2. Train model
-a. modify solver.prototxt & train.prototxt
+2.1 Modify solver.prototxt & train.prototxt
 
 - solver.prototxt
     - net: your_train_prototxt_path
@@ -53,7 +53,8 @@ a. modify solver.prototxt & train.prototxt
     - fc7 layer
         - num_output : your_dataset_class_num
 
-b. Run Command
+        
+2.2 Run Command
 
 ```
 sh train.sh mobilenet
@@ -62,7 +63,7 @@ sh train.sh mobilenet_v2
 ```
 
 ##### 3. Inference
-Run Command
+3.1 Run Command
 
 ```
 # Use the python that your caffe envrionment.
